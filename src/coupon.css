@@ -1,0 +1,32 @@
+.cop_grid{
+    display: grid;
+    grid-template-columns:2fr 1fr;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 33%;
+  }
+  .coupon_box{
+  border: 2px ridge black;
+  padding: 20px;
+  width:auto;
+  }
+  .simple_text{
+    line-height: 1rem;
+    margin: 0;
+  }
+  .coupon_info_bar{
+  display: flex;
+  flex-direction: row;
+  }
+  .logo_button{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
