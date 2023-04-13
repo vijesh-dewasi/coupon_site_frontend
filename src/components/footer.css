@@ -1,0 +1,10 @@
+.footer_container{
+    align-items: center;
+    row-gap: 30px;
+    padding-block: 40px;
+    background-color: var(--LightestNavShade);
+}
+
+.social_media_links{
+    column-gap: 20px;
+}

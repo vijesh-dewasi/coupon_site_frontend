@@ -29,7 +29,6 @@
 }
 
 
-
 @media screen and (max-width:600px){
     .nav_toggler{
         display:inherit;
@@ -40,12 +39,15 @@
     }
 
     .nav_links_container{
+        background-color: var(--LightestNavShade);
         position:absolute;
         top:100%;
-        right:-100%;
+        left:-100%; 
+        /* should think about the above property */
         display: flex;
         flex-direction: column;
         text-align: center;
+        padding-block:20px;
     }
     .active{
         right:0;

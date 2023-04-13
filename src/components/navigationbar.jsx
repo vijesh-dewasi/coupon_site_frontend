@@ -38,7 +38,7 @@ export default function (props) {
                        
                         <li onClick={() => (setdropdown(!dropdown))} className='nav_item'>
                         <a className="nav_link" href="#">CATEGORIES
-                        <i class="fa-solid fa-caret-down fa-lg"></i>
+                        <i className="fa-solid fa-caret-down fa-lg"></i>
                         </a>
                         <Categories />
                         </li>

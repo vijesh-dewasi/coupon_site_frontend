@@ -34,3 +34,7 @@
   color: #61dafb;
 }
 
+.coupons{
+  gap:10px;
+  justify-content: space-between;
+}
