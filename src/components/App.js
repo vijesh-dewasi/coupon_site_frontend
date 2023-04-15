@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="app">
       <Navigationbar/>
-      <div className=" coupons flex_row" style={{padding:3+'rem'} }>
+      <div className="coupons flex_row">
       <Coupon/>
       <Coupon/>
       <Coupon/>

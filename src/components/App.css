@@ -35,6 +35,13 @@
 }
 
 .coupons{
-  gap:10px;
+  row-gap:5px;
   justify-content: space-between;
+  padding:60px;
+}
+
+@media screen and (max-width:450px){
+  .coupons{
+    padding:1rem;
+  }
 }

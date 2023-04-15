@@ -1,6 +1,7 @@
 import React from "react";
 import './coupon.css';
 
+
 //need to take loo at two issues logo display and the tag font awesome
 
 export default function () {
@@ -9,13 +10,13 @@ export default function () {
 
   //try to captilixe first letter for below three
   const brand ="Amazon"; 
-  const isverified = true; 
-  const islimited = true;
+  const isverified = 1; 
+  const islimited = 1;
   
   //fully capitalize the coupon title
-  const coupon_title = "50% OFF ON SALE";
-  const coupon_desc = "we discount";
-  const img_url = "public\images\avatar.png";
+  const coupon_title = "50% OFF ON SALE with the buy get one offer";
+  const coupon_desc = "we discount the same discoinvdv dkjfndsd lorem ipsm kfgnd  fnnklf kdnfg fkg  ";
+  const img_url ="./images/demo.jpeg";
 
 
   const logo_styles={
@@ -27,14 +28,15 @@ export default function () {
 
   return (
     <div className='container flex_col'>
+
       <div className='coupon_info_bar flex_row'>
 
       <p className="coupon_tag">
-      {isverified ? "Verfied": "unverified"}
+      {isverified && "verfied" }
       </p>
        
       <p className="coupon_tag">
-      {islimited ? "Exclusive" : "unlimited"}
+      {islimited ? "exclusive"  : "regular"}
       </p>
        
       <p className="coupon_tag">
@@ -47,14 +49,18 @@ export default function () {
 
         <div className='coupon_grid'>
           <div className='coupon_desc flex_col'>
-            <h2>
+            <h3>
               {coupon_title}
-            </h2>
+            </h3>
             <p className="">{coupon_desc}</p>
           </div>
+
           <div className="logo_button flex_col">
-           <div className="logo_img_holder" style={{logo_styles}}>
+
+           <div className="logo_img_holder">
+           <img className="logo_img" src={img_url} alt="kuch_bhi"/>
             </div>
+
             <button className='fancy_button' href="#">check coupon</button>
           </div>
 

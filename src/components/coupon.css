@@ -10,11 +10,12 @@
    border-radius: 40px;
    background-color: var(--LightestNavShade);
    padding: 20px;
-   max-width: 20vw;
+   max-width: 25vw;
+   flex-wrap: nowrap
    /* the above property have some thing to do with the width of coupon there might be other possible ways too  */
   }
  
-  .coupon_desc h2{
+  .coupon_desc h3{
     /* color:var(--TextShade); */
     color: #fff;
     font-weight: 900;
@@ -25,6 +26,7 @@
   .coupon_desc p{
    color: var(--TextShade);
    font-weight: 600;
+   font-size: 16px;
   }
 
   .coupon_tag{
@@ -34,11 +36,11 @@
  
   .coupon_info_bar{
    column-gap: 10px;
-   align-items: flex-start;
-   justify-content:flex-start;
+   align-self: flex-start;
   }
+  
   .logo_button{
-    align-content: center;
+    align-items:s;
     justify-content: center;
     row-gap: 20px;
   }
@@ -67,7 +69,24 @@
     background-image: -o-linear-gradient(top, var(--LightestNavShade), var(--DarkBtnShade));
     background-image: linear-gradient(to bottom, var(--LightestNavShade), var(--DarkBtnShade));
     text-decoration: none;
+    border: solid #fff 4px;
   }
+
+.logo_img{
+  max-width: 100%;
+  height: 100%;
+}
+
+.logo_img_holder{
+border-radius: 100%;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+height:80px;
+width: 80px;
+}
+
 
  /* // in review if miight have other ways too */
 
@@ -78,12 +97,46 @@
       justify-content: center;
       align-items: center;
     }
-    
+   
   }
 
-  @media screen and (max-width:1000px) and (min-width:830px){
+  @media screen and (max-width:1190px) and (min-width:830px){
     .container{
       max-width:35vw;
     }
+  }
+
+  @media screen and (max-width:450px){
+    .coupon_grid{
+  display: flex;
+  flex-direction: column;
+    }
+    .coupon_desc h3{
+      margin-bottom: 0;
+      font-size: 20px;
+    }
+    .logo_button{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+   
+  
+    /* .logo_img_holder{
+      max-width:50%;
+    } */
     
+  }
+  @media screen and (max-width:352px){
+  
+    .logo_button{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .logo_img_holder{
+      max-width:50%;
+    }
   }
