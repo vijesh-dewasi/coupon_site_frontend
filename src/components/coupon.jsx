@@ -23,6 +23,11 @@ function Coupon(props) {
 
     function Expanded_coupon(){
 
+      function copy_button_handler(e){
+        navigator.clipboard.writeText(coupon_code)
+       e.target.innerText="copied";
+      }
+
       return (
         <div className="exp_overlay" style={{display:expand_visible?"inline":"none"}}>
        
@@ -54,7 +59,7 @@ function Coupon(props) {
               <div className="coupon_code">
                 {coupon_code}
               </div>
-              <button  onClick={() => {navigator.clipboard.writeText(coupon_code)}} className="copy_btn">Copy Code</button>
+              <button  onClick={copy_button_handler} className="copy_btn">Copy Code</button>
               </div>
           </div>
           <a href={redirection_link}>Visit Site</a>
