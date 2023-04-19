@@ -42,6 +42,7 @@
   .logo_button{
     align-items:s;
     justify-content: center;
+    align-items: center;
     row-gap: 20px;
   }
   

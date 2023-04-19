@@ -78,7 +78,7 @@ function Coupon(props) {
       <div className='coupon_info_bar flex_row'>
 
         <p className="coupon_tag">
-          {isverified && "verfied"}
+          {isverified ? "verfied":""}
         </p>
 
         <p className="coupon_tag">
