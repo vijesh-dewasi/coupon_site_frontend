@@ -114,6 +114,4 @@ function Coupon(props) {
     </div>
   )
 }
-
-
 export default Coupon  

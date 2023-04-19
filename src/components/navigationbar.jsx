@@ -1,15 +1,16 @@
 import './navigationbar.css';
 import React, { useState } from 'react';
 
-//this component can  use below routes
+//this component can use below routes
 // --/categories/(category_name)
 // --/home
 //I need to create pages for brand store and login page
 //further the routes would be /brand store && /login or /signup 
 
 export default function (props) {
-    //    const category_list = props.categories;
-    const category_list = props.category_list;// dummy fo now
+    
+       const category_list = props.categories;
+    // const category_list = props.category_list;// dummy fo now
    
     const [toggle, setactive] = useState(0);
     const [dropdown, setdropdown] = useState(0);
