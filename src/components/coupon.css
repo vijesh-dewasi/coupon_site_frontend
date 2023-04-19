@@ -4,6 +4,7 @@
     column-gap: 20px;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
   }
   .container{
    border: 10px solid var(--MediumShade);
@@ -11,7 +12,10 @@
    background-color: var(--LightestNavShade);
    padding: 20px;
    max-width: 25vw;
-   flex-wrap: nowrap
+   flex-wrap: nowrap;
+   row-gap: 10px;
+   /* justify-content: space-between; */
+   /* justify-items: flex-start; */
    /* the above property have some thing to do with the width of coupon there might be other possible ways too  */
   }
  
@@ -30,22 +34,47 @@
   }
 
   .coupon_tag{
-    margin:0;
     color: var(--TextShade);
+    align-self:flex-start;
+    gap:5px;
+  }
+  .coupon_tag p{
+    margin: 0;
+    font-size: 0.75rem;
   }
  
   .coupon_info_bar{
    column-gap: 10px;
    align-self: flex-start;
+  justify-content: flex-start;
   }
+
+ .tag_img_holder{
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:30px;
+  width: 30px;
+ }
+.tag_img{
+  max-width: 100%;
+  height: 100%;
+}
+
   
   .logo_button{
-    align-items:s;
-    justify-content: center;
     align-items: center;
     row-gap: 20px;
+    height: 100%;
   }
   
+  .coupon_desc{
+    height: 100%;
+    justify-content: flex-start;
+  }
+
   /*button generators magi */
 
   .copy_btn,.fancy_button{
@@ -144,6 +173,9 @@ width: 80px;
 }
 
 
+.coupon_box{
+  height: 100%;
+}
 
 .detail_logo{
   display: grid;
@@ -170,6 +202,7 @@ justify-content: flex-start;
       max-width:100vw;
       justify-content: center;
       align-items: center;
+
     }
    
   }
