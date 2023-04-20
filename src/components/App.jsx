@@ -1,9 +1,10 @@
-import './App.css';
-import React from 'react';
+import './App.css'
+import React from 'react'
 import Navigationbar from './navigationbar.jsx'
 import Footer from './footer.jsx'
 import Coupons from './coupons.jsx'
 import { useState,useEffect} from 'react';
+import Login_page from './login.jsx';
 
 // function Place_holder(){    
 //   return (
@@ -79,7 +80,8 @@ function App() {
   return (   
     <div className="app">
       <Navigationbar key="1" categories={category_list} />
-      <Coupons coupons={coupons_list} />
+      {/* <Coupons coupons={coupons_list} /> */}
+      <Login_page/>
       <Footer />
     </div>
   )

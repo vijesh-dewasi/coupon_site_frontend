@@ -1,0 +1,54 @@
+.log_container{
+        border: 10px solid var(--MediumShade);
+        border-radius: 40px;
+        background-color: var(--LightestNavShade);
+        padding: 50px;
+        flex-wrap: nowrap;
+        row-gap: 20px;
+}
+
+.password_box,.email_box{
+justify-content: space-between;
+width: 100%;
+gap: 10px;
+font-weight: 700;
+color: var(--TextShade);
+}
+
+.padder{
+    padding: 70px;
+    justify-content: center;
+    width: auto;
+}
+
+
+
+.log_buttons{   
+    justify-content: space-around;
+}
+
+
+@media screen and (max-width:780px) {
+
+    .password_box,.email_box{
+      gap: 10px;
+        }
+
+    .padder{
+        padding:70px 10px;
+    }
+
+}
+@media screen and (max-width:480px) {
+
+    .password_box,.email_box{
+        flex-direction: column;
+        }
+        .padder{
+            padding:50px 10px;
+        } 
+        .log_container{
+            padding: 20px;
+        }
+
+}
