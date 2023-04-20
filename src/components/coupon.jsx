@@ -2,9 +2,6 @@ import React from "react";
 import './coupon.css';
 import { useState } from "react";
 
-
-//need to take look at  issues such icons for tag 
-
 function Coupon(props) {
 
   const {
@@ -20,6 +17,9 @@ function Coupon(props) {
     redirection_link } = props.coupon;
 
   const [expand_visible, set_expand] = useState(0);
+  const verfied_icon_url="/images/verified.png"
+  const limited_icon_url="/images/limited.png"
+  const branded_icon_url="/images/brand-image.png"
 
   function Expanded_coupon() {
 
@@ -27,6 +27,7 @@ function Coupon(props) {
       navigator.clipboard.writeText(coupon_code)
       e.target.innerText = "copied";
     }
+
 
     return (
       <div className="exp_overlay" style={{ display: expand_visible ? "inline" : "none" }}>
@@ -81,7 +82,7 @@ function Coupon(props) {
         <div className="coupon_tag flex_row">
            <p>Verfied</p>
           <div className="tag_img_holder">
-           <img className="tag_img" src="./images/verified.png" alt="" />
+           <img className="tag_img" src={verfied_icon_url} alt="" />
           </div>
         </div>:""
         }
@@ -92,7 +93,7 @@ function Coupon(props) {
              Exclusive 
           </p>
           <div className="tag_img_holder">
-          <img className="tag_img" src="./images/limited.png" alt="" />
+          <img className="tag_img" src={limited_icon_url} alt="" />
           </div>
         </div>: "regular"
         }
@@ -102,7 +103,7 @@ function Coupon(props) {
              {brand} 
           </p>
           <div className="tag_img_holder">
-           <img className="tag_img" src="./images/brand-image.png" alt="" />
+           <img className="tag_img" src={branded_icon_url} alt="" />
           </div>
         </div>
         : ""}
