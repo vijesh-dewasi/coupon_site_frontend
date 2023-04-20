@@ -27,6 +27,10 @@ color: var(--TextShade);
     justify-content: space-around;
 }
 
+.input_box{
+    border-radius: 15px;
+}
+
 
 @media screen and (max-width:780px) {
 

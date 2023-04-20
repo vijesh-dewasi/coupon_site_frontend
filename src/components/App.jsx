@@ -25,29 +25,29 @@ function App() {
   //all category retrival start
   //the below thing was for retrival of all coupon of all categories
   
-  const API = 'http://localhost:3001/categories';
-  var all_cat={};
-  function updatelist(){
-    setcouponlist([]) 
-  all_cat
-  .forEach((category)=>{
-  category_list.push(category.id);
-  category.coupons
-  .forEach((our_coupon)=>{
-        setcouponlist(coupons_list=>[...coupons_list,our_coupon])
-      })})
-  }
+  // const API = 'http://localhost:3001/categories';
+  // var all_cat={};
+  // function updatelist(){
+  //   setcouponlist([]) 
+  // all_cat
+  // .forEach((category)=>{
+  // category_list.push(category.id);
+  // category.coupons
+  // .forEach((our_coupon)=>{
+  //       setcouponlist(coupons_list=>[...coupons_list,our_coupon])
+  //     })})
+  // }
   
-  useEffect(() => {
-    fetch(API)
-    .then((res) => res.json())
-    .then( (res) => {
-      all_cat=res;   
-    })
-    .then(()=>{
-      updatelist() 
-       })
-  },[])
+  // useEffect(() => {
+  //   fetch(API)
+  //   .then((res) => res.json())
+  //   .then( (res) => {
+  //     all_cat=res;   
+  //   })
+  //   .then(()=>{
+  //     updatelist() 
+  //      })
+  // },[])
   
   // all category retrival end
 
