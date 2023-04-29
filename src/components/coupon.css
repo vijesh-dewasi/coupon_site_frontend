@@ -194,7 +194,31 @@ justify-content: flex-start;
 }
 
 
- /* // in review if miight have other ways too */
+ .like_holder{
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+ .like_img{
+width: 40px;
+height:40px;
+}
+
+.like_btn{
+background: none;
+border: none;
+height: 30px;
+width: 30px;
+padding: 0;
+margin: 0;
+}
+
+ /* // in review if might have other ways too */
 
   @media screen and (max-width:830px) {
 

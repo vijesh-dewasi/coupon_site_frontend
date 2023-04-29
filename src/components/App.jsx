@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   BrowserRouter as Router,
-  Routes, Route, Link,
+  Routes, Route,Link,
   useParam
 } from 'react-router-dom'
 import './App.css'
@@ -26,8 +26,7 @@ const [coupons_list, setcouponlist] = useState([]);
           <Route path="/categories" element={<Allcoupons/>} />
           <Route path="/categories/:category_name" element={<Category/>} />
           <Route path="/" element={<Homepage />} />
-          <Route path="/brand store" element={<Allcoupons/>} /> 
-          <Route path="/" element={<Homepage />} />          
+          <Route path="/brand store" element={<Allcoupons/>} />     
         </Routes>
         <Footer />
       </Router>

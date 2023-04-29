@@ -21,13 +21,21 @@ function Coupon(props) {
   const limited_icon_url="/images/limited.png"
   const branded_icon_url="/images/brand-image.png"
 
-  function Expanded_coupon() {
+ //for now we are setting the like state directly later we will check get it from a server for some user 
+  const [liked, set_like_handle] = useState(0);
 
+
+  function Handle_like_toggle(){
+  //here we would be needing to post some request to server if coupon is liked unliked
+    set_like_handle(!liked)
+  }
+
+
+  function Expanded_coupon() {
     function copy_button_handler(e) {
       navigator.clipboard.writeText(coupon_code)
       e.target.innerText = "copied";
     }
-
 
     return (
       <div className="exp_overlay" style={{ display: expand_visible ? "inline" : "none" }}>
@@ -119,7 +127,7 @@ function Coupon(props) {
             <h3>
               {coupon_title}
             </h3>
-            <p className="">{coupon_desc}</p>
+            <p className="">{coupon_desc.substring(0,29)+'...'}</p>
           </div>
 
           <div className="logo_button flex_col">
@@ -127,7 +135,15 @@ function Coupon(props) {
             <div className="logo_img_holder">
               <img className="logo_img" src={logo_url} alt="kuch_bhi" />
             </div>
-            <button onClick={() => (set_expand(1))} className='fancy_button' href="#">check coupon</button>
+
+            <div className="flex_row like_holder">
+              <button onClick={() => (set_expand(1))} className='fancy_button' href="#">check coupon</button>     
+              <button 
+              onClick={()=>Handle_like_toggle()} 
+              className="like_btn">
+              <img className="like_img" src={liked?"/images/heart.png":"/images/greyh.png"} alt="heart" />
+              </button>   
+            </div>
           </div>
 
         </div>

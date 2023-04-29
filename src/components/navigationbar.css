@@ -12,6 +12,9 @@
     font-weight: 700;
     font-size:0.5rem;
 }
+.nav_link:hover{
+    text-decoration: underline;
+}
 
 .nav_links_container{
     column-gap: 20px;

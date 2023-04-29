@@ -14,9 +14,8 @@ function Category(){
     var cat={};
     
     function updatelist(){ 
-
+    setcouponlist([]);
   const retrived_coupons=cat.coupons;
-
   retrived_coupons.forEach((coupon)=>{
   setcouponlist(coupons_list=>[...coupons_list,coupon])
   })
@@ -31,7 +30,7 @@ function Category(){
     .then(()=>{
       updatelist() 
        })
-  },[])
+  },[category])
 
     return (
        <Coupons coupons={coupons_list}/>
