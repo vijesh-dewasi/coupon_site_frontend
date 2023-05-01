@@ -12,6 +12,7 @@ import Login_page from './login.jsx';
 import Allcoupons from "./allcoupons.jsx"
 import Homepage from "./homepage.jsx"
 import Category from './category.jsx' 
+import Signup from './signup.jsx'
 
 //in future lets create brand_store_page and the home_page just by querying for appropriate coupons
 
@@ -26,7 +27,8 @@ const [coupons_list, setcouponlist] = useState([]);
           <Route path="/categories" element={<Allcoupons/>} />
           <Route path="/categories/:category_name" element={<Category/>} />
           <Route path="/" element={<Homepage />} />
-          <Route path="/brand store" element={<Allcoupons/>} />     
+          <Route path="/brand store" element={<Allcoupons/>} />
+          <Route path="/signup" element={<Signup/>} />     
         </Routes>
         <Footer />
       </Router>
