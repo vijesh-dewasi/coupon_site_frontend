@@ -5,12 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+    
     --DarkBtnShade:#BBD6B8;
     --TextShade:#94AF9F;
     --MediumShade:#AEC2B6;
     --LightestNavShade:#DBE4C6;
-}
+    --CouponBackground:rgb(226, 226, 226);
+  }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

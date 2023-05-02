@@ -2,7 +2,7 @@ import {useParams} from 'react-router-dom'
 import React from 'react'
 import { useState, useEffect } from 'react';
 import Coupons from './coupons';
-
+import './category.css'
 
 function Category(){
     
@@ -33,7 +33,10 @@ function Category(){
   },[category])
 
     return (
+    <React.Fragment>
+       <h2 className='fancy_text'>--{category}--</h2>
        <Coupons coupons={coupons_list}/>
+       </React.Fragment>
     )
 }
 

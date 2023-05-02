@@ -1,6 +1,4 @@
 
-
-
 .App {
   text-align: center;
 }
@@ -39,6 +37,11 @@
   column-gap:5px;
   justify-content: flex-start;
   padding:60px;
+  /* below are meant to be removed just used for some test  but now i am liking the style of it */
+  background-color:var(--CouponBackground);
+  border: 5px solid var(--MediumShade);
+  border-left: none;
+  border-right: none;
 }
 
 @media screen and (max-width:450px){

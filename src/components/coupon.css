@@ -207,6 +207,17 @@ justify-content: flex-start;
  .like_img{
 width: 40px;
 height:40px;
+filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-webkit-transition: all 1s ease;
+}
+
+.like_img:hover{
+  filter: grayscale(0%);
+  filter: gray;
+  -webkit-filter: grayscale(0%);
+  filter: none;
+  transition: 1s ease;
 }
 
 .like_btn{

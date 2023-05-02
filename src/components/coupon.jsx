@@ -24,6 +24,9 @@ function Coupon(props) {
  //for now we are setting the like state directly later we will check get it from a server for some user 
   const [liked, set_like_handle] = useState(0);
 
+  const no_grey={
+    filter: "grayscale(0%)"
+  }  
 
   function Handle_like_toggle(){
   //here we would be needing to post some request to server if coupon is liked unliked
@@ -141,7 +144,7 @@ function Coupon(props) {
               <button 
               onClick={()=>Handle_like_toggle()} 
               className="like_btn">
-              <img className="like_img" src={liked?"/images/heart.png":"/images/greyh.png"} alt="heart" />
+              <img className="like_img" src={liked?"/images/heart.png":"/images/greyh.png"} alt="heart" style={liked?no_grey:{}} />
               </button>   
             </div>
           </div>

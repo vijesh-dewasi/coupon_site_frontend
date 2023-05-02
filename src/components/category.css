@@ -1,0 +1,5 @@
+.fancy_text{
+    padding-left: 60px;
+    text-transform:uppercase;
+    color:var(--TextShade);
+}
