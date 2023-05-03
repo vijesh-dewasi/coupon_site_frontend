@@ -229,6 +229,30 @@ padding: 0;
 margin: 0;
 }
 
+
+.link_feedback{
+  gap: 10px;
+  align-items: center;
+}
+
+.feed_btn{
+height: 35px;
+width: 35px;
+transition: all 0.2s ease-in-out;
+}
+
+.feed_btn:hover{
+  filter: drop-shadow(2px 2px 2px rgb(75, 218, 199));
+  }
+
+#upBtn{
+  transform: rotateY(180deg);
+}
+
+#downBtn{
+  transform: rotateX(180deg);
+}
+
  /* // in review if might have other ways too */
 
   @media screen and (max-width:830px) {

@@ -11,19 +11,23 @@ function Login_page() {
     const [cred, setcred] = useState({ mail: "", pass: "" })
     const [pass_err_msg,set_pass_msg]=useState("");
     
-    // useEffect(()=>{
-    // return (()=>{
-    //     setcred({mail:"",pass:""})
-    // })  
-    // },[])
-
-    function handlesubmit(e) {
+   
+    async function handlesubmit(e) {
+        //for now doing nothing with the response after post request later will authenticate
         e.preventDefault();
-
-        //first send the received credentials to the server then we need to authenticate and allow the coupon code usage 
-
+        await fetch("/login",{
+            method: "POST", 
+            body: JSON.stringify(cred),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        })
+        .then(response => response.json())
+        .then(json => console.log(json))
+        .then(()=>{
         cred.mail="";
         cred.pass="";
+        }) 
     }
 
     function handleChange(e) {

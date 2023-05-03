@@ -8,16 +8,30 @@ function Login_page() {
 
     const [cred, setcred] = useState({ mail: "", pass: "",repass:""})
 
-    function handlesubmit(e) {
+   async function handlesubmit(e) {
         e.preventDefault();
         if(cred.pass===cred.repass){
-            //some logic to post request to add a new user to db
-            console.log(cred)
+            e.preventDefault();
+        await fetch("/signup",{
+            method: "POST", 
+            body: JSON.stringify(cred),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        })
+        .then(response => response.json())
+        .then(json => console.log(json))
+        .then(()=>{
+        cred.mail="";
+        cred.pass="";
+        cred.repass=""
+        }) 
         }
         else{
             console.log("the password re-entered wont match to the first one");
             set_pass_msg("the password re-entered wont match to the first one")            
         }
+
         
         cred.mail="";
         cred.pass="";
