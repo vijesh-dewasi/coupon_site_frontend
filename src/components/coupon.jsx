@@ -41,6 +41,7 @@ function Coupon(props) {
     }
 
     return (
+      //I should have used the dialog html element instead
       <div className="exp_overlay" style={{ display: expand_visible ? "inline" : "none" }}>
 
         <div className="expanded_coupon flex_col">

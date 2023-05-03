@@ -1,37 +1,41 @@
 import Coupons from "./coupons";
-import { useState,useEffect} from "react";
+import {React, useState, useEffect } from "react";
 
 
-function Allcoupons(){ 
+function Allcoupons() {
 
-const API = 'http://localhost:3001/categories';
-const [coupons_list, setcouponlist] = useState([]);
+  const API = '/categories';
+  const [coupons_list, setcouponlist] = useState([]);
 
-  var all_cat={};
-  function updatelist(){
-    setcouponlist([]) 
-  all_cat
-  .forEach((category)=>{
-  category.coupons
-  .forEach((our_coupon)=>{
-        setcouponlist(coupons_list=>[...coupons_list,our_coupon])
-      })})
+  var all_cat = {};
+  function updatelist() {
+    setcouponlist([])
+    all_cat
+      .forEach((category) => {
+        category.coupons
+          .forEach((our_coupon) => {
+            setcouponlist(coupons_list => [...coupons_list, our_coupon])
+          })
+      })
   }
 
   useEffect(() => {
     fetch(API)
-    .then((res) => res.json())
-    .then( (res) => {
-      all_cat=res;   
-    })
-    .then(()=>{
-      updatelist() 
-       })
-  },[])
+      .then((res) => res.json())
+      .then((res) => {
+        all_cat = res;
+      })
+      .then(() => {
+        updatelist()
+      })
+  }, [])
 
-  return(
-    <Coupons coupons={coupons_list} />
-  ) 
+  return (
+    <>
+      <h2 className='fancy_text'>--Brand Store--</h2>
+      <Coupons coupons={coupons_list} />
+    </>
+  )
 
 }
 

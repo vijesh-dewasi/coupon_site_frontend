@@ -1,5 +1,6 @@
 import './navigationbar.css';
-import React, { useState ,useEffect} from 'react';
+import React from 'react';
+import { useState ,useEffect} from 'react';
 import {NavLink} from 'react-router-dom'
 
 //this component can use below routes
@@ -14,7 +15,7 @@ export default function () {
     
     const [category_list] = useState([]);    
    
-    const API = 'http://localhost:3001/categories';
+    const API = '/categories';
   var all_cat={};
   function updatelist(){
   all_cat
