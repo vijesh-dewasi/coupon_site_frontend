@@ -1,0 +1,36 @@
+.profile_img{
+    max-width: 100%;
+    height: 100%;
+  }
+  
+  .profile_img_holder{
+  border-radius: 100%;
+  overflow: hidden;
+  height:50px;
+  width: 50px;
+  background-color: var(--DarkBtnShade);
+  }
+  
+ 
+  .profile_txt{
+    font-weight: 500;
+  }
+
+  .nameImg_box{
+  align-items: center;
+  gap: 20px;
+  }
+
+.profile_container{
+    color: var(--TextShade);
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    max-width: 300px;
+    gap: 15px;
+    background-color: var(--CouponBackground);
+    border-radius: 50px;
+   
+    position: absolute;
+    right: 0;
+}

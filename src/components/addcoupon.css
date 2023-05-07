@@ -1,0 +1,40 @@
+.post_form{
+    padding: 50px;
+    gap: 10px;
+}
+
+.input_lables{
+    color: var(--TextShade);
+    font-weight: 500;
+    text-transform:uppercase;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submiter{
+    background: #fff;
+    -webkit-border-radius: 16;
+    -moz-border-radius: 16;
+    border-radius: 16px;
+    -webkit-box-shadow: 2px 3px 5px #666666;
+    -moz-box-shadow: 2px 3px 5px #666666;
+    box-shadow: 2px 3px 5px #666666;
+    font-family: Arial;
+    color: var(--TextShade);
+    padding: 10px 20px 10px 20px;
+    border: solid var(--MediumShade) 4px;
+    text-decoration: none;
+  }
+  
+
+  .submiter:hover {
+    background-image: -webkit-linear-gradient(top, var(--LightestNavShade), var(--DarkBtnShade));
+    background-image: -moz-linear-gradient(top, var(--LightestNavShade), var(--DarkBtnShade));
+    background-image: -ms-linear-gradient(top, var(--LightestNavShade), var(--DarkBtnShade));
+    background-image: -o-linear-gradient(top, var(--LightestNavShade), var(--DarkBtnShade));
+    background-image: linear-gradient(to bottom, var(--LightestNavShade), var(--DarkBtnShade));
+    text-decoration: none;
+    border: solid #fff 4px;
+  }

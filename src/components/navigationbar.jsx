@@ -2,20 +2,14 @@ import './navigationbar.css';
 import React from 'react';
 import { useState ,useEffect} from 'react';
 import {NavLink} from 'react-router-dom'
-
-//this component can use below routes
-// --/categories/(category_name)
-// --/home
-// /brand store
-
-//I need to create pages for brand store and login page
-//further the routes would be /brand store && /login or /signup 
+import Profile from './profile.jsx'
 
 export default function () {
     
-    const [category_list] = useState([]);    
-   
-    const API = '/categories';
+   const islogin=1;
+
+const [category_list] = useState([]);    
+const API = '/categories';
   var all_cat={};
   function updatelist(){
   all_cat
@@ -37,6 +31,7 @@ export default function () {
 
     const [toggle, setactive] = useState(0);
     const [dropdown, setdropdown] = useState(0);
+    const [viewprofile,setprofile]=useState(0);
 
     const our_site_logo="/images/logo.png";
      
@@ -56,6 +51,18 @@ export default function () {
    ):"";
     }
 
+    function toggleprofile(){
+    setprofile(!viewprofile)
+    console.log(viewprofile)
+    }
+
+    const [checked, setChecked] = React.useState(false);
+
+    const handleChange = () => {
+      setChecked((prev) => !prev);
+    };
+  
+
     return (
         <div>
             <nav className="nav_container flex_row">
@@ -71,10 +78,17 @@ export default function () {
                         <Categories />
                         </li>
                         <li className='nav_item'><NavLink className="nav_link" to="/brand store">BRAND STORE</NavLink></li>
-                        <li className='nav_item'><NavLink className="nav_link" to="/login">LOGIN</NavLink></li>
+                        <li className='nav_item'>{
+                        islogin==0 
+                        ?<NavLink className="nav_link" to="/login">LOGIN</NavLink>
+                        : <a className="nav_link" onClick={toggleprofile}>Profile</a>
+                        }</li>
                     </div>
                 </ul>
             </nav>
+
+  {viewprofile?<Profile/>:<></>}
+
         </div>
     )
 }

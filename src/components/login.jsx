@@ -49,13 +49,13 @@ function Login_page() {
 
                 <div className="log_container flex_col">
                     <div className="email_box flex_row">
-                        <label htmlFor="">EMAIL</label>
-                        <input className="input_box" onChange={handleChange} value={cred.mail} type="email" name="email_input" />
+                        <label htmlFor="email_log">EMAIL</label>
+                        <input className="input_box" onChange={handleChange} value={cred.mail} type="email" name="email_input" id="email_log" />
                     </div>
 
                     <div className="password_box flex_row">
                         <label htmlFor="password_input">PASSWORD</label>
-                        <input className="input_box" onChange={handleChange} value={cred.pass} type="password" name="password_input" />
+                        <input className="input_box" onChange={handleChange} value={cred.pass} type="password" name="password_input" id="password_input" />
                     </div>
 
                     <div className="flex_row log_buttons">
