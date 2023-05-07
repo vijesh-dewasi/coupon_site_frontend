@@ -4,6 +4,9 @@ import { useState ,useEffect} from 'react';
 import {NavLink} from 'react-router-dom'
 import Profile from './profile.jsx'
 
+
+
+
 export default function () {
     
    const islogin=1;
@@ -56,12 +59,7 @@ const API = '/categories';
     console.log(viewprofile)
     }
 
-    const [checked, setChecked] = React.useState(false);
-
-    const handleChange = () => {
-      setChecked((prev) => !prev);
-    };
-  
+    
 
     return (
         <div>
@@ -86,6 +84,10 @@ const API = '/categories';
                     </div>
                 </ul>
             </nav>
+
+
+          
+
 
   {viewprofile?<Profile/>:<></>}
 
