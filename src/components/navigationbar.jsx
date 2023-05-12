@@ -1,11 +1,12 @@
 import './navigationbar.css';
-import React from 'react';
+import React ,{lazy,Suspense} from 'react';
 import { useState ,useEffect} from 'react';
 import {NavLink} from 'react-router-dom'
-import Profile from './profile.jsx'
+// import Profile from './profile.jsx'
 
-
-
+const Profile = lazy(()=>
+  import('./profile.jsx')
+)
 
 export default function () {
     
@@ -85,11 +86,11 @@ const API = '/categories';
                 </ul>
             </nav>
 
-
-          
-
-
-  {viewprofile?<Profile/>:<></>}
+     {viewprofile?
+     <Suspense fallback = { <div> Please Wait... </div>}>
+     <Profile/>
+     </Suspense>
+     :<></>}
 
         </div>
     )
