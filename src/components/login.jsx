@@ -5,12 +5,18 @@ import {
     Link,
     useParam
   } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+
+    
+
+
+
 
 function Login_page() {
 
     const [cred, setcred] = useState({ mail: "", pass: "" })
     const [pass_err_msg,set_pass_msg]=useState("");
-    
+    let navigate = useNavigate(); 
    
     async function handlesubmit(e) {
         //for now doing nothing with the response after post request later will authenticate
@@ -23,7 +29,16 @@ function Login_page() {
             }
         })
         .then(response => response.json())
-        .then(json => console.log(json))
+        .then(resp => {
+            console.log(resp)
+            if(resp[0].user_mail==cred.mail){
+                
+            navigate("/")
+            }
+            else{
+                set_pass_msg("the credential didnt match to any one of data");
+            }
+        })
         .then(()=>{
         cred.mail="";
         cred.pass="";
@@ -39,7 +54,7 @@ function Login_page() {
         else if (input_name === "password_input") {
             setcred({...cred,pass:update})
         }
-        console.log(cred);
+        
     }
 
     return (

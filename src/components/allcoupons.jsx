@@ -32,7 +32,7 @@ function Allcoupons() {
 
   return (
     <>
-      <h2 className='fancy_text'>--Brand Store--</h2>
+      <h2 className='fancy_text'>--ALL coupons--</h2>
       <Coupons coupons={coupons_list} />
     </>
   )

@@ -18,7 +18,7 @@ const API = '/categories';
   function updatelist(){
   all_cat
   .forEach((category)=>{
-  category_list.push(category.id);
+  category_list.push(category);
   })
   }
 
@@ -76,7 +76,7 @@ const API = '/categories';
                         </a>
                         <Categories />
                         </li>
-                        <li className='nav_item'><NavLink className="nav_link" to="/brand store">BRAND STORE</NavLink></li>
+                        <li className='nav_item'><NavLink className="nav_link" to="/brandstore">BRAND STORE</NavLink></li>
                         <li className='nav_item'>{
                         islogin==0 
                         ?<NavLink className="nav_link" to="/login">LOGIN</NavLink>

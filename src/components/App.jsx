@@ -14,9 +14,16 @@ import Homepage from "./homepage.jsx"
 import Category from './category.jsx' 
 import Signup from './signup.jsx'
 import Addcoupon from './addcoupon.jsx'
+import Brandstore from './brandstore.jsx'
+
+
 
 function App() {
+
+
 const [coupons_list, setcouponlist] = useState([]);
+
+
   return (
     <div className="app">
       <Router>
@@ -26,7 +33,7 @@ const [coupons_list, setcouponlist] = useState([]);
           <Route path="/categories" element={<Allcoupons/>} />
           <Route path="/categories/:category_name" element={<Category/>} />
           <Route path="/" element={<Homepage />} />
-          <Route path="/brand store" element={<Allcoupons/>} />
+          <Route path="/brandstore" element={<Brandstore/>} />
           <Route path="/signup" element={<Signup/>} />  
           <Route path="/addcoupon" element={<Addcoupon/>} />     
         </Routes>

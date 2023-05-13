@@ -1,11 +1,12 @@
 import "./login.css"
 import React, {useEffect,useState } from "react"
-
+import { useNavigate } from "react-router-dom";
 
 function Login_page() {
 
            const [pass_err_msg,set_pass_msg]=useState("");
-
+           let navigate = useNavigate(); 
+   
     const [cred, setcred] = useState({ mail: "", pass: "",repass:""})
 
    async function handlesubmit(e) {
@@ -24,17 +25,17 @@ function Login_page() {
         .then(()=>{
         cred.mail="";
         cred.pass="";
-        cred.repass=""
+        cred.repass="";
+        navigate("/") 
         }) 
         }
         else{
             console.log("the password re-entered wont match to the first one");
             set_pass_msg("the password re-entered wont match to the first one")            
         }
-
-        
         cred.mail="";
         cred.pass="";
+         
     }
 
     function handleChange(e) {

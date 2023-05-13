@@ -8,6 +8,7 @@ const points=10;
 const uploaded_coupon=50;
 const received_coupon=100;
 const imgurl="/images/demo.jpeg";
+const favourites_url="/favourites/"+profile_name;
 
 return (
 <div className="profile_container flex_col">
@@ -23,8 +24,6 @@ return (
 <p className="profile_txt">no_coupon_received:{received_coupon}</p>
 
 
-{/* <div className="profile_btns flex_row"> */}
-
 <NavLink className="fancy_button" to="/addcoupon">
 {/* {uploaded_coupon>1?"upload_more_coupons":"upload your first coupon"} */}
 upload coupons
@@ -34,7 +33,9 @@ upload coupons
 logout
 </NavLink>
 
-{/* // </div */}
+<NavLink className="fancy_button" to={favourites_url}>
+YOUR_FAVOURITES 
+</NavLink>
 
 
 </div>
