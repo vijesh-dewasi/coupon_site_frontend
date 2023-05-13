@@ -3,10 +3,11 @@ import './profile.css'
 import {NavLink} from 'react-router-dom'
 
 function profile(props){
-const profile_name="vijesh dewasi";
-const points=10;
-const uploaded_coupon=50;
-const received_coupon=100;
+  console.log(props)
+const profile_name=props.data[0].user_mail;
+const points=props.data[0].total_points;
+const uploaded_coupon=props.data[0].coupons_uploaded.count;
+const received_coupon=props.data[0].coupons_received.count;
 const imgurl="/images/demo.jpeg";
 const favourites_url="/favourites/"+profile_name;
 
@@ -29,7 +30,7 @@ return (
 upload coupons
 </NavLink>
 
-<NavLink className="fancy_button" to="/addcoupon">
+<NavLink className="fancy_button" to="/">
 logout
 </NavLink>
 

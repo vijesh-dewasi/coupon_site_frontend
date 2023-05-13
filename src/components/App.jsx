@@ -22,14 +22,14 @@ function App() {
 
 
 const [coupons_list, setcouponlist] = useState([]);
-
+const [user_profile,setuser_profile]= useState({mail:"",points:0,no_of_coupon_uploaded:0,no_of_coupon_Received:0});
 
   return (
     <div className="app">
       <Router>
-        <Navigationbar/>
+        <Navigationbar profile_data={user_profile} setfun={setuser_profile}/>
         <Routes>
-          <Route path="/login" element={<Login_page/>} />
+          <Route path="/login" element={<Login_page setfun={setuser_profile} />} />
           <Route path="/categories" element={<Allcoupons/>} />
           <Route path="/categories/:category_name" element={<Category/>} />
           <Route path="/" element={<Homepage />} />

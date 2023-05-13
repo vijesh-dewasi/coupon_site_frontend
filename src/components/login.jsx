@@ -10,9 +10,7 @@ import { useNavigate } from "react-router-dom";
     
 
 
-
-
-function Login_page() {
+function Login_page(props) {
 
     const [cred, setcred] = useState({ mail: "", pass: "" })
     const [pass_err_msg,set_pass_msg]=useState("");
@@ -32,11 +30,11 @@ function Login_page() {
         .then(resp => {
             console.log(resp)
             if(resp[0].user_mail==cred.mail){
-                
+                props.setfun(resp)
             navigate("/")
             }
             else{
-                set_pass_msg("the credential didnt match to any one of data");
+                set_pass_msg("the credential didn't match to any one of data");
             }
         })
         .then(()=>{

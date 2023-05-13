@@ -8,9 +8,18 @@ const Profile = lazy(()=>
   import('./profile.jsx')
 )
 
-export default function () {
-    
-   const islogin=1;
+export default function (props) {
+  
+  
+
+   var islogin=1;
+
+   if(props.profile_data.mail==""){
+    islogin=0;
+   }
+   else{
+    islogin=1;
+   }
 
 const [category_list] = useState([]);    
 const API = '/categories';
@@ -88,7 +97,7 @@ const API = '/categories';
 
      {viewprofile?
      <Suspense fallback = { <div> Please Wait... </div>}>
-     <Profile/>
+     <Profile data={props.profile_data} />
      </Suspense>
      :<></>}
 
