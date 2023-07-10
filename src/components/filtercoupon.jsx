@@ -6,7 +6,7 @@ import { useActionData } from "react-router-dom";
 const Filteredcoupon = function (props) {
     const [coupons_list, setcouponlist] = useState([]);
     const filter_name=props.filter.name;
-    const API = '/tab_filters/'+filter_name;
+    const API = 'https://coupon-site-server.vercel.app/tab_filters/'+filter_name;
     
     var cat = {};
     function updatelist() {

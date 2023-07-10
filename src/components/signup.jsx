@@ -13,7 +13,7 @@ function Login_page() {
         e.preventDefault();
         if(cred.pass===cred.repass){
             e.preventDefault();
-        await fetch("/signup",{
+        await fetch("https://coupon-site-server.vercel.app/signup",{
             method: "POST", 
             body: JSON.stringify(cred),
             headers: {

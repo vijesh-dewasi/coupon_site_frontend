@@ -9,7 +9,7 @@ function Category() {
   const [coupons_list, setcouponlist] = useState([]);
   const category = useParams().category_name;
 
-  const API = '/categories/' + category;
+  const API = 'https://coupon-site-server.vercel.app/categories/' + category;
 
   var cat = {};
 

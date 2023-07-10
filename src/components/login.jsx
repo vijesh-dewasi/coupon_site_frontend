@@ -19,7 +19,7 @@ function Login_page(props) {
     async function handlesubmit(e) {
         //for now doing nothing with the response after post request later will authenticate
         e.preventDefault();
-        await fetch("/login",{
+        await fetch("https://coupon-site-server.vercel.app/login",{
             method: "POST", 
             body: JSON.stringify(cred),
             headers: {

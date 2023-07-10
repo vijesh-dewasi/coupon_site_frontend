@@ -22,7 +22,7 @@ export default function (props) {
    }
 
 const [category_list] = useState([]);    
-const API = '/categories';
+const API = 'https://coupon-site-server.vercel.app/categories';
   var all_cat={};
   function updatelist(){
   all_cat

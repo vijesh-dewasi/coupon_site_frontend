@@ -23,7 +23,7 @@ const Addcoupon=function(props){
     async function handlesubmit(e) {
         //for now doing nothing with the response after post request later will authenticate
         e.preventDefault();
-        await fetch("/addcoupon",{
+        await fetch("https://coupon-site-server.vercel.app/addcoupon",{
             method: "POST", 
             body: JSON.stringify(couponBody),
             headers: {

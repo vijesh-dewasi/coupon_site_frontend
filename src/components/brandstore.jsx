@@ -7,7 +7,7 @@ function Category() {
 
   const [coupons_list, setcouponlist] = useState([]);
  
-  const API = '/brandstore';
+  const API = 'https://coupon-site-server.vercel.app/brandstore';
 
   var cat = {};
 

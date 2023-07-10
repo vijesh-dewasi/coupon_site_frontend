@@ -4,7 +4,7 @@ import {React, useState, useEffect } from "react";
 
 function Allcoupons(props) {
 
-  const API = '/categories';
+  const API = 'https://coupon-site-server.vercel.app/categories';
   const [coupons_list, setcouponlist] = useState([]);
 
   var all_cat = {};
