@@ -13,6 +13,7 @@ const favourites_url="/favourites/"+profile_name;
 
 return (
 <div className="profile_container flex_col">
+
 <div className="nameImg_box flex_row">
   <div className="profile_img_holder flex_row">
   <img className="profile_img" src={imgurl} alt="some_img"/>

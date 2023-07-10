@@ -2,7 +2,7 @@ import Coupons from "./coupons";
 import {React, useState, useEffect } from "react";
 
 
-function Allcoupons() {
+function Allcoupons(props) {
 
   const API = '/categories';
   const [coupons_list, setcouponlist] = useState([]);

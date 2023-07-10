@@ -35,7 +35,7 @@ const [user_profile,setuser_profile]= useState({mail:"",points:0,no_of_coupon_up
           <Route path="/" element={<Homepage />} />
           <Route path="/brandstore" element={<Brandstore/>} />
           <Route path="/signup" element={<Signup/>} />  
-          <Route path="/addcoupon" element={<Addcoupon/>} />     
+          <Route path="/addcoupon" element={<Addcoupon user={user_profile}/> } />     
         </Routes>
         <Footer />
       </Router>

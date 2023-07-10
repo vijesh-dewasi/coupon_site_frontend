@@ -1,0 +1,47 @@
+i am creating mongo database for my coupon site I want coupon to be categorised and also each coupon has got properties such as title,description,isverified ,islimited,redirection etc fields 
+pls suggest me good schema for mongo db
+
+
+
+
+{
+  "_id": ObjectId("..."), // automatically generated unique identifier for each coupon
+  "title": "string", // title of the coupon
+  "description": "string", // description of the coupon
+  "category": "string", // category of the coupon, e.g. "Food", "Clothing", "Electronics"
+  "isVerified": "boolean", // indicates whether the coupon has been verified by the site's staff
+  "isLimited": "boolean", // indicates whether the coupon is available for a limited time or quantity
+  "expirationDate": "date", // date on which the coupon expires (if applicable)
+  "redirection": {
+    "url": "string", // URL to which the user is redirected when they click the coupon
+    "target": "string" // specifies how the URL should be opened, e.g. "_blank" for a new tab
+  },
+  "createdAt": "date", // date on which the coupon was added to the database
+  "updatedAt": "date" // date on which the coupon was last updated
+}
+
+
+
+//category wise nested document
+
+{
+  "_id": ObjectId("..."), // automatically generated unique identifier for the category document
+  "name": "string", // name of the category, e.g. "Food", "Clothing", "Electronics"
+  "coupons": [ // array of coupons belonging to this category
+    {
+      "_id": ObjectId("..."), // automatically generated unique identifier for the coupon
+      "title": "string", // title of the coupon
+      "description": "string", // description of the coupon
+      "isVerified": "boolean", // indicates whether the coupon has been verified by the site's staff
+      "isLimited": "boolean", // indicates whether the coupon is available for a limited time or quantity
+      "expirationDate": "date", // date on which the coupon expires (if applicable)
+      "redirection": {
+        "url": "string", // URL to which the user is redirected when they click the coupon
+        "target": "string" // specifies how the URL should be opened, e.g. "_blank" for a new tab
+      },
+      "createdAt": "date", // date on which the coupon was added to the database
+      "updatedAt": "date" // date on which the coupon was last updated
+    },
+    // more coupons belonging to this category
+  ]
+}

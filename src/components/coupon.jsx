@@ -156,7 +156,7 @@ function Coupon(props) {
           <div className="tag_img_holder">
           <img className="tag_img" src={limited_icon_url} alt="" />
           </div>
-        </div>: "regular"
+        </div>: ""
         }
         {(brand.length > 0) ?
         <div className="coupon_tag flex_row">

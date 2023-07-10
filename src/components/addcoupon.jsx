@@ -1,7 +1,10 @@
 import React,{useState,useEffect} from "react";
 import './addcoupon.css'
+import { useNavigate } from "react-router-dom";
 
 const Addcoupon=function(props){
+        let navigate = useNavigate();   
+
 
   const [couponBody, setcouponBody] = 
   useState({ 
@@ -12,10 +15,10 @@ const Addcoupon=function(props){
   coupon_title: "",
   coupon_desc: "",
   validupto:Date(),
-  redirection_link: ""
+  redirection_link: "",
+  user:props.user
 })
 
-    
    
     async function handlesubmit(e) {
         //for now doing nothing with the response after post request later will authenticate
@@ -38,8 +41,12 @@ const Addcoupon=function(props){
             coupon_title: "",
             coupon_desc: "",
             vaildupto:Date(),
-            redirection_link: ""})
+            redirection_link: "",
+        user:""
+    })
         }) 
+        navigate("/")
+
     }
 
     function handleChange(e){
